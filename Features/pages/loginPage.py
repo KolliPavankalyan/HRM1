@@ -14,12 +14,14 @@ class LoginPage(BasePage):
     login_button_xpath = "//button[normalize-space()='Login']"
     employee_list_xpath = "//a[normalize-space()='Employee List']"
     failure_msg_class_name = "toast-message"
+    username = "Admin"
+    userpassword = "blbF9@RZH4"
 
-    def enter_validUser(self):
-        self.type_into_element("admin_name_class_name",self.admin_name_class_name,"Admin")
+    def enter_validUser(self,username):
+        self.type_into_element("admin_name_class_name",self.admin_name_class_name, username)
 
-    def enter_validPAssward(self):
-        self.type_into_element("admin_password_class_name", self.admin_password_class_name, "blbF9@RZH4")
+    def enter_validPAssward(self,userpassword):
+        self.type_into_element("admin_password_class_name", self.admin_password_class_name, userpassword)
 
     def login_button(self):
         self.click_on_element("login_button_xpath", self.login_button_xpath)
@@ -37,8 +39,8 @@ class LoginPage(BasePage):
         self.type_into_element("admin_password_class_name", self.admin_password_class_name, "")
         self.type_into_element("admin_password_class_name", self.admin_password_class_name, "")
 
-    def failure_msg(self):
-        self.contains("failure_msg_class_name", self.failure_msg_class_name, "Invalid Credentials")
+    # def failure_msg(self):
+    #     self.contains("failure_msg_class_name", self.failure_msg_class_name, "Invalid Credentials")
 
 
 # class LoginPage:

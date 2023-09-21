@@ -9,12 +9,14 @@ class SearchEmployee(BasePage):
 
     search_employee_name_id = "employee_name_quick_filter_employee_list_value"
     click_on_employeeName_inSuggetion_class_name = "angucomplete-row"
+    search_employe_name_xpath = "//td[normalize-space()='Vinod Reddy Lambu']"
 
     def enter_employee_inSearchbar(self):
-        self.type_into_element("search_employee_name_id",self.search_employee_name_id, "sai")
+        self.type_into_element("search_employee_name_id",self.search_employee_name_id, "Vinod Reddy Lambu")
 
 
     def clickOn_employeeNameSuggetion(self):
-        suggetions = self.get_elements("click_on_employeeName_inSuggetion_class_name",self.click_on_employeeName_inSuggetion_class_name)
-        suggetions[0].click()
+       self.text_equal("search_employe_name_xpath",self.search_employe_name_xpath,"Vinod Reddy Lambu")
+
+
 
