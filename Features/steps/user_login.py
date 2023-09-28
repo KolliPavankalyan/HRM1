@@ -18,8 +18,8 @@ from Features.pages.loginPage import LoginPage
 @when(u'I enter valid user email address and valid user password as into the fields')
 def step_impl(context):
     context.login = LoginPage(context.driver)
-    context.login.enter_validUser("")
-    context.login.enter_validPAssward("")
+    context.login.enter_validUser("sowjanya")
+    context.login.enter_validPAssward("sowjanya25")
 
 
 @when(u'I click on user Login button')
@@ -30,6 +30,31 @@ def step_impl(context):
 @then(u'I should user is get logged in or not')
 def step_impl(context):
     context.login.check_creditinals_correctOrNot()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # @when(u'I enter valid user email address and valid user password as into the fields')
 # def step_impl(context):

@@ -13,6 +13,7 @@ def before_scenario(context,driver):
         context.driver = webdriver.Edge()
 
     context.driver.maximize_window()
+    context.driver.implicitly_wait(25)
     context.driver.get(ConfigReader.read_configuration("basic info","url"))
 
 def after_scenario(context,driver):

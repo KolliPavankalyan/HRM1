@@ -14,8 +14,8 @@ def step_impl(context):
     context.login  = LoginPage(context.driver)
     context.addEmployee = AddEmployeeDetails(context.driver)
     context.searchPage  = SearchEmployee(context.driver)
-    context.login.enter_validUser()
-    context.login.enter_validPAssward()
+    context.login.enter_validUser("Admin")
+    context.login.enter_validPAssward("XSdz9L@Mf7")
     context.login.login_button()
     context.addEmployee.clickOnEmployeeList()
 
@@ -30,7 +30,7 @@ def step_impl(context):
     time.sleep(10)
     context.driver.find_element(By.ID, "quick_search_icon").click()
     time.sleep(10)
-    context.searchPage.clickOn_employeeNameSuggetion()
+    # context.searchPage.clickOn_employeeNameSuggetion()
 
 
 @then(u'Check employee added or not')

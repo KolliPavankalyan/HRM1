@@ -12,8 +12,8 @@ from Features.pages.loginPage import LoginPage
 def step_impl(context):
     context.login = LoginPage(context.driver)
     context.attendance = AttendancePage(context.driver)
-    context.login.enter_validUser("sowjanya")
-    context.login.enter_validPAssward("sowjanya25")
+    context.login.enter_validUser("")
+    context.login.enter_validPAssward("")
     time.sleep(5)
 
 
@@ -40,9 +40,15 @@ def step_impl(context):
 
 @when(u'apply attendance punch out')
 def step_impl(context):
-    pass
+    context.driver.find_element(By.XPATH, "//button[normalize-space()='Login']").click()
+    time.sleep(5)
+    context.attendance.click_on_attendance()
+    time.sleep(5)
+    context.attendance.click_on_punch_out()
+    time.sleep(5)
 
 
 @then(u'check employe punch out or not')
 def step_impl(context):
-    pass
+    time.sleep(5)
+    context.attendance.check_punch_out_or_not()

@@ -15,7 +15,7 @@ class LoginPage(BasePage):
     employee_list_xpath = "//a[normalize-space()='Employee List']"
     failure_msg_class_name = "toast-message"
     username = "Admin"
-    userpassword = "blbF9@RZH4"
+    userpassword = "XSdz9L@Mf7"
 
     def enter_validUser(self,username):
         self.type_into_element("admin_name_class_name",self.admin_name_class_name, username)

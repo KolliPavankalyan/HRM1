@@ -1,3 +1,5 @@
+import time
+
 from behave import *
 from selenium import webdriver
 
@@ -12,8 +14,9 @@ def step_impl(context):
 
 @when(u'I enter valid email address and valid password as into the fields')
 def step_impl(context):
+    time.sleep(10)
     context.login.enter_validUser("Admin")
-    context.login.enter_validPAssward("blbF9@RZH4")
+    context.login.enter_validPAssward("XSdz9L@Mf7")
 
 @when(u'I click on Login button')
 def step_impl(context):
